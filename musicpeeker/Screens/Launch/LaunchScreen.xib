@@ -16,16 +16,23 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Launchscreen ni oist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnm-n6-CUl">
-                    <rect key="frame" x="186" y="252" width="158" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_launch" translatesAutoresizingMaskIntoConstraints="NO" id="8SK-25-ijQ">
+                    <rect key="frame" x="87" y="333" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="TxP-ar-dG3"/>
+                        <constraint firstAttribute="width" constant="240" id="e9i-HW-i9l"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8SK-25-ijQ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="RMW-TU-JQ7"/>
+                <constraint firstItem="8SK-25-ijQ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="cLg-VI-XHJ"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>
+    <resources>
+        <image name="ico_launch" width="200" height="200"/>
+    </resources>
 </document>

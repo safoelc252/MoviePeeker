@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FA96EC022FB078F0007BE6E /* DashboardItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA96EBE22FB078F0007BE6E /* DashboardItemCell.swift */; };
+		0FA96EC122FB078F0007BE6E /* DashboardItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FA96EBF22FB078F0007BE6E /* DashboardItemCell.xib */; };
 		0FE85DB822FAE90500C3DABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE85DB722FAE90500C3DABA /* AppDelegate.swift */; };
 		0FE85DBF22FAE90600C3DABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE85DBE22FAE90600C3DABA /* Assets.xcassets */; };
 		0FE85DCD22FAE90600C3DABA /* musicpeekerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE85DCC22FAE90600C3DABA /* musicpeekerTests.swift */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		0A35B039619A50FACACF0324 /* Pods-musicpeekerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicpeekerUITests.debug.xcconfig"; path = "Target Support Files/Pods-musicpeekerUITests/Pods-musicpeekerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0EB465A815290D2C532E54A8 /* Pods_musicpeekerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicpeekerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FA96EBE22FB078F0007BE6E /* DashboardItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardItemCell.swift; sourceTree = "<group>"; };
+		0FA96EBF22FB078F0007BE6E /* DashboardItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardItemCell.xib; sourceTree = "<group>"; };
 		0FE85DB422FAE90500C3DABA /* musicpeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicpeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE85DB722FAE90500C3DABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FE85DBE22FAE90600C3DABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FA96EBD22FB07700007BE6E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0FA96EBE22FB078F0007BE6E /* DashboardItemCell.swift */,
+				0FA96EBF22FB078F0007BE6E /* DashboardItemCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		0FE85DAB22FAE90500C3DABA = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +185,7 @@
 		0FE85DE722FAEF1700C3DABA /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				0FA96EBD22FB07700007BE6E /* Cells */,
 				0FE85DE822FAEF4000C3DABA /* DashboardViewController.swift */,
 				0FE85DE922FAEF4000C3DABA /* DashboardViewController.xib */,
 			);
@@ -225,7 +239,6 @@
 				0A35B039619A50FACACF0324 /* Pods-musicpeekerUITests.debug.xcconfig */,
 				4C40320B59C96DB66C60291A /* Pods-musicpeekerUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -338,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FE85DBF22FAE90600C3DABA /* Assets.xcassets in Resources */,
+				0FA96EC122FB078F0007BE6E /* DashboardItemCell.xib in Resources */,
 				0FE85DFA22FAF6B900C3DABA /* LaunchScreen.xib in Resources */,
 				0FE85DEB22FAEF4000C3DABA /* DashboardViewController.xib in Resources */,
 			);
@@ -451,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FE85DED22FAF08B00C3DABA /* Application.swift in Sources */,
+				0FA96EC022FB078F0007BE6E /* DashboardItemCell.swift in Sources */,
 				0FE85DF122FAF27500C3DABA /* BaseCodeType.swift in Sources */,
 				0FE85DF722FAF44B00C3DABA /* Navigation.swift in Sources */,
 				0FE85DB822FAE90500C3DABA /* AppDelegate.swift in Sources */,
