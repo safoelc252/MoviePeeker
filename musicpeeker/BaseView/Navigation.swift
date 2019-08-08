@@ -11,6 +11,7 @@ import UIKit
 extension BaseController {
     func getDashboard() -> UIViewController {
         let vc = DashboardViewController()
-        return vc
+        let navi = AppNavigationController(rootViewController: vc)
+        return navi
     }
 }

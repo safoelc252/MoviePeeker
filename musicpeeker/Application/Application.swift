@@ -13,15 +13,15 @@ public class Application: NSObject {
     static let shared = Application()
     var window: UIWindow!
     func configure(window: UIWindow) {
+        self.window = window
         prepareRootView()
     }
 }
 
 extension Application {
     open func prepareRootView() {
-        let keyWindow = UIApplication.shared.keyWindow
         let controller = createController()
-        keyWindow?.rootViewController = controller
+        self.window?.rootViewController = controller
     }
     open func createController() -> UIViewController {
         let baseView = BaseController()

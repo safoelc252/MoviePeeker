@@ -12,4 +12,10 @@ class BaseController: UIViewController, BaseCodeType {
     func prepareDisplay() { }
     func bindViewModel() { }
     func bindDisplay() { }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.prepareDisplay()
+        self.bindViewModel()
+        self.bindDisplay()
+    }
 }

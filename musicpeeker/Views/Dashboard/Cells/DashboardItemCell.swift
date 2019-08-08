@@ -9,7 +9,14 @@
 import UIKit
 
 class DashboardItemCell: UITableViewCell {
+    static let nib = UINib(nibName: "DashboardItemCell", bundle: nil)
+    static let identifier = "DashboardItemCellID"
 
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelPrice: UILabel!
+    @IBOutlet weak var labelGenre: UILabel!
+    @IBOutlet weak var imageTrackArt: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -18,4 +25,8 @@ class DashboardItemCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func setData(data: SearchItem) {
+        labelTitle.text = data.trackName
+        // etc
+    }
 }

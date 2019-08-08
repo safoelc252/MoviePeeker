@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: Base Code types for Binding
 protocol BaseCodeType {
     func prepareDisplay()
     func bindViewModel()
