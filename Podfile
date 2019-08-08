@@ -1,9 +1,18 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '11.0'
 
+def rx_swift
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'RxGesture'
+  pod 'RxDataSources'
+end
 def alamofire
-  pod 'Alamofire', '~> 4.7'
   pod 'RxAlamofire'
+end
+def json
+  pod 'ObjectMapper', '~> 3.4'
+  pod 'SwiftyJSON'
 end
 
 target 'musicpeeker' do
@@ -12,7 +21,9 @@ target 'musicpeeker' do
   inhibit_all_warnings!
 
   # Pods for musicpeeker
+  rx_swift
   alamofire
+  json
 
   target 'musicpeekerTests' do
     inherit! :search_paths
