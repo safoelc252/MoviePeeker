@@ -19,4 +19,10 @@ class AppNavigationController: UINavigationController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
+    
+    override func viewDidLoad() {
+        super .viewDidLoad()
+        navigationBar.barTintColor = UIColor.themeDark
+    }
 }
+

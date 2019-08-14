@@ -13,7 +13,7 @@ import RxCocoa
 final class ErrorTracker: SharedSequenceConvertibleType {
     typealias SharingStrategy = DriverSharingStrategy
     private let _subject = PublishSubject<Error>()
-    func trackError<O: ObservableConvertibleType>(from source: O) -> Observable<O.E> {
+    func trackError<O: ObservableConvertibleType>(from source: O) -> Observable<O.Element> {
         return source.asObservable().do(onError: onError)
     }
     func asSharedSequence() -> SharedSequence<SharingStrategy, Error> {
@@ -31,7 +31,7 @@ final class ErrorTracker: SharedSequenceConvertibleType {
 }
 
 extension ObservableConvertibleType {
-    func trackError(_ errorTracker: ErrorTracker) -> Observable<E> {
+    func trackError(_ errorTracker: ErrorTracker) -> Observable<Element> {
         return errorTracker.trackError(from: self)
     }
 }

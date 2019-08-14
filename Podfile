@@ -15,6 +15,11 @@ def json
   pod 'SwiftyJSON'
 end
 
+def display
+  pod 'SDWebImage', '~> 5.0'
+  pod 'Material', '~> 3.1.0'
+end
+
 target 'musicpeeker' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
@@ -24,6 +29,7 @@ target 'musicpeeker' do
   rx_swift
   alamofire
   json
+  display
 
   target 'musicpeekerTests' do
     inherit! :search_paths
