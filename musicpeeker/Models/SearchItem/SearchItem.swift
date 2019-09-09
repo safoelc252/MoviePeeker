@@ -42,8 +42,14 @@ struct SearchItem: ImmutableMappable {
     var primaryGenreName : String?
     var contentAdvisoryRating : String?
     var isStreamable : Bool?
-
-     init(map: Map) throws {
+    var trackRentalPrice : Double?
+    var trackHdRentalPrice : Double?
+    var shortDescription : String?
+    var trackHdPrice : Double?
+    var longDescription : String?
+    var collectionHdPrice : Double?
+    
+    init(map: Map) throws {
         wrapperType          = try? map.value("wrapperType")
         kind                 = try? map.value("kind")
         artistId             = try? map.value("artistId")
@@ -76,6 +82,12 @@ struct SearchItem: ImmutableMappable {
         primaryGenreName     = try? map.value("primaryGenreName")
         contentAdvisoryRating = try? map.value("contentAdvisoryRating")
         isStreamable         = try? map.value("isStreamable")
+        trackRentalPrice         = try? map.value("trackRentalPrice")
+        trackHdRentalPrice         = try? map.value("trackHdRentalPrice")
+        shortDescription         = try? map.value("shortDescription")
+        trackHdPrice         = try? map.value("trackHdPrice")
+        longDescription         = try? map.value("longDescription")
+        collectionHdPrice         = try? map.value("collectionHdPrice")
     }
 
     mutating func mapping(map: Map) {
@@ -111,5 +123,11 @@ struct SearchItem: ImmutableMappable {
         primaryGenreName     <- map["primaryGenreName"]
         contentAdvisoryRating <- map["contentAdvisoryRating"]
         isStreamable         <- map["isStreamable"]
+        trackRentalPrice     <- map["trackRentalPrice"]
+        trackHdRentalPrice   <- map["trackHdRentalPrice"]
+        shortDescription     <- map["shortDescription"]
+        trackHdPrice         <- map["trackHdPrice"]
+        longDescription      <- map["longDescription"]
+        collectionHdPrice    <- map["collectionHdPrice"]
     }
 }

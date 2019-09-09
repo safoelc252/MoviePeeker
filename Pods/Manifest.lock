@@ -8,6 +8,9 @@ PODS:
   - Motion (3.1.1):
     - Motion/Core (= 3.1.1)
   - Motion/Core (3.1.1)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
   - ObjectMapper (3.5.1)
   - RxAlamofire (5.0.0):
     - RxAlamofire/Core (= 5.0.0)
@@ -34,6 +37,7 @@ PODS:
 
 DEPENDENCIES:
   - Material (~> 3.1.0)
+  - NVActivityIndicatorView
   - ObjectMapper (~> 3.4)
   - RxAlamofire
   - RxCocoa (~> 5)
@@ -49,6 +53,7 @@ SPEC REPOS:
     - Differentiator
     - Material
     - Motion
+    - NVActivityIndicatorView
     - ObjectMapper
     - RxAlamofire
     - RxCocoa
@@ -64,6 +69,7 @@ SPEC CHECKSUMS:
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Material: 9b30613deb1b79487eeede5e4f90cbff084311ea
   Motion: f115b33f36cc52472a25a965daa89b3859817de0
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   RxAlamofire: e7875a012aff55345672d0f70a2a9cd6aeb0f211
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
@@ -74,6 +80,6 @@ SPEC CHECKSUMS:
   SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 6fd25a9ef7a1daccb70a53d8dacde4329f298c70
+PODFILE CHECKSUM: 6c09497706a2f0b29a060ee3c56bd31e8fee1313
 
 COCOAPODS: 1.7.5

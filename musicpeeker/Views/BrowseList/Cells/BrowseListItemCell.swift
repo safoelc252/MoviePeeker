@@ -36,6 +36,14 @@ class BrowseListItemCell: UITableViewCell {
         viewCard.layer.insertSublayer(gradient, at: 0)
     }
     
+    override func prepareForReuse() {
+        labelImage.isHidden = true
+        labelTitle.text = ""
+        labelPrice.text = ""
+        labelGenre.text = ""
+        imageTrackArt.image = nil
+    }
+    
     func setData(data: SearchItem) {
         labelTitle.text = data.trackName ?? ""
         labelPrice.text = "\(data.currency ?? "USD") \(data.trackPrice ?? 0)"
@@ -56,6 +64,7 @@ class BrowseListItemCell: UITableViewCell {
         }
     }
     fileprivate func setLabelImage(text: String) {
+        labelImage.isHidden = false
         labelImage.backgroundColor = .black
         labelImage.textColor = .white
         labelImage.text = text

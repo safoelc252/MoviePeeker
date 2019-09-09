@@ -38,7 +38,8 @@ class BrowseListViewModel: ViewModelType {
             }
             .map { term -> [String: String] in
                 let param = ["term": term,
-                             "country": "us"]
+                             "country": "au",
+                             "media": "movie"]
                 return param
             }.flatMapLatest { param -> RxA<Metadata<[SearchItem]>>.Driver in
                 self.dataItems.accept([])
@@ -54,10 +55,13 @@ class BrowseListViewModel: ViewModelType {
 
 extension BrowseListViewModel {
     func bindError(vc: BrowseListViewController, error: Error) {
-        debugPrint(error)
+        vc.view.showToast(message: error.localizedDescription)
     }
     func bindSearch(vc: BrowseListViewController, response: Metadata<[SearchItem]>) {
         if let result = response.results {
+            if result.isEmpty {
+                vc.tabBarController?.view.showToast(message: "Result is empty")
+            }
             dataItems.accept(result)
         }
     }

@@ -18,6 +18,7 @@ end
 def display
   pod 'SDWebImage', '~> 5.0'
   pod 'Material', '~> 3.1.0'
+  pod 'NVActivityIndicatorView'
 end
 
 target 'musicpeeker' do

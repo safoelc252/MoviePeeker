@@ -48,9 +48,8 @@ extension DashboardViewController:  UITabBarControllerDelegate {
         self.navigationItem.titleView = nil
 
         switch type {
-        case .browse:
-            addSearchBar()
-        default: break
+        case .browse: addSearchBar()
+        case .profile: addTitle("Profile")
         }
     }
 
@@ -61,6 +60,14 @@ extension DashboardViewController:  UITabBarControllerDelegate {
         searchBar.delegate = self
         searchBar.returnKeyType = .search
         navigationItem.titleView = searchBar
+    }
+    fileprivate func addTitle(_ title: String) {
+        let titleLabel = UILabel(frame: .zero)
+        titleLabel.sizeToFit()
+        titleLabel.text = title
+        titleLabel.font = UIFont(name: "Verdana-Bold", size: 20.0)
+        titleLabel.textColor = .white
+        navigationItem.titleView = titleLabel
     }
 }
 

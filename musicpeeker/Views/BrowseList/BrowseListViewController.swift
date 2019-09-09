@@ -16,16 +16,12 @@ class BrowseListViewController: BaseController {
     let disposeBag = DisposeBag()
     let viewModel = BrowseListViewModel()
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        viewModel.triggerSearch.accept("true")
-//    }
-    
     override func prepareDisplay() {
         prepareTableView()
     }
     override func bindDisplay() {
         bindTableView()
+        bindIndicator()
     }
     override func bindViewModel() {
         let input = BrowseListViewModel.Input(loadSearch: viewModel.triggerSearch.asDriver())
@@ -40,7 +36,7 @@ class BrowseListViewController: BaseController {
             .disposed(by: disposeBag)
     }
     
-    private func prepareTableView() {
+    fileprivate func prepareTableView() {
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50
@@ -48,7 +44,7 @@ class BrowseListViewController: BaseController {
                            forCellReuseIdentifier: BrowseListItemCell.identifier)
         tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
     }
-    private func bindTableView() {
+    fileprivate func bindTableView() {
         viewModel.dataItems
             .asObservable()
             .bind(to: tableView
@@ -58,12 +54,18 @@ class BrowseListViewController: BaseController {
                             cell.selectionStyle = .none
             }.disposed(by: disposeBag)
 
-//        tableViewRunners.rx.itemSelected
-//            .subscribe(onNext: { indexPath in
-//                let publicID = self.viewModel.dataRunners.value[indexPath.row].publicID ?? 0
-//                self.gotoUser(publicID: publicID)
-//            }).disposed(by: disposeBag)
-        
+        tableView.rx.itemSelected
+            .subscribe(onNext: {  indexPath in
+                // TODO: Add data to Realm
+                self.gotoDetails()
+            }).disposed(by: disposeBag)
+    }
+    fileprivate func bindIndicator() {
+        viewModel
+            .activityTracker
+            .asObservable()
+            .bind(to: IndicatorView.rx.isAnimating)
+            .disposed(by: disposeBag)
     }
 }
 

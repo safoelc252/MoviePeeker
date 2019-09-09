@@ -14,4 +14,10 @@ extension BaseController {
         let navi = AppNavigationController(rootViewController: vc)
         return navi
     }
+    
+    func gotoDetails() {
+        let vc = ItemDetailsViewController()
+        self.navigationController?
+            .pushViewController(vc, animated: true)
+    }
 }
