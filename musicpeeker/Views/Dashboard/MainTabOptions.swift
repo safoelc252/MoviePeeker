@@ -15,7 +15,7 @@ class MainTabOption {
     var vc1: UIViewController {
         let vc = BrowseListViewController()
         vc.tabBarItem = UITabBarItem(title: nil,
-                                     image: UIImage(named:"ico_music_library"),
+                                     image: UIImage(named:"ico_movie_library"),
                                      selectedImage: nil)
         vc.tabBarItem.imageInsets = UIEdgeInsets(top: 16, left: 0,
                                                  bottom: -16, right: 0)

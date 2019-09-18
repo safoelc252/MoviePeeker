@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:musicpeeker.xcodeproj">
+      location = "group:/Users/cleofasvillarin/Development/workspace/ios/musicpeeker/musicpicker.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

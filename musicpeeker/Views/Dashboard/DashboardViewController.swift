@@ -56,7 +56,7 @@ extension DashboardViewController:  UITabBarControllerDelegate {
     fileprivate func addSearchBar() {
         let searchBar = UISearchBar()
         searchBar.sizeToFit()
-        searchBar.placeholder = "Search song"
+        searchBar.placeholder = "Search movie title"
         searchBar.delegate = self
         searchBar.returnKeyType = .search
         navigationItem.titleView = searchBar

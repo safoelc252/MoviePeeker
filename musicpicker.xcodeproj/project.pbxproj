@@ -507,7 +507,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0FE85DAF22FAE90500C3DABA /* Build configuration list for PBXProject "musicpeeker" */;
+			buildConfigurationList = 0FE85DAF22FAE90500C3DABA /* Build configuration list for PBXProject "musicpicker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -958,7 +958,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0FE85DAF22FAE90500C3DABA /* Build configuration list for PBXProject "musicpeeker" */ = {
+		0FE85DAF22FAE90500C3DABA /* Build configuration list for PBXProject "musicpicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0FE85DDA22FAE90600C3DABA /* Debug */,

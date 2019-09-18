@@ -11,6 +11,5 @@ import UIKit
 class ItemDetailsViewController: BaseController {
     
     override func prepareDisplay() {
-        
     }
 }
