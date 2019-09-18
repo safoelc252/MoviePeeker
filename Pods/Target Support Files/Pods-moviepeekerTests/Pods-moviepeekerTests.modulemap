@@ -1,0 +1,6 @@
+framework module Pods_moviepeekerTests {
+  umbrella header "Pods-moviepeekerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
