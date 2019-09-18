@@ -47,9 +47,9 @@
 		0FFE571F230ABEB70001F727 /* ItemDetailTrackArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFE571D230ABEB70001F727 /* ItemDetailTrackArtCell.swift */; };
 		0FFE5720230ABEB70001F727 /* ItemDetailTrackArtCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FFE571E230ABEB70001F727 /* ItemDetailTrackArtCell.xib */; };
 		0FFE57222314DABE0001F727 /* NavigationItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFE57212314DABE0001F727 /* NavigationItems.swift */; };
-		2401AFB3068BC852EC2B89A3 /* Pods_musicpeekerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB465A815290D2C532E54A8 /* Pods_musicpeekerTests.framework */; };
-		988E5796BACCEDE4C0DD776B /* Pods_musicpeeker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E735FF9D7D5F14441BB97EE3 /* Pods_musicpeeker.framework */; };
-		AD6B098B34A9C5E3B4D21C4D /* Pods_musicpeekerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE345520BAC8AE72804A064 /* Pods_musicpeekerUITests.framework */; };
+		2B73B4914643DD5789035739 /* Pods_moviepeekerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FA96131FB1DE8EC7E7FA0D /* Pods_moviepeekerUITests.framework */; };
+		5ACBBC28E5BD978ED1C02A43 /* Pods_moviepeeker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766D28B5F5403A994404C703 /* Pods_moviepeeker.framework */; };
+		C336091A4EA344C90B057149 /* Pods_moviepeekerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E33480EF5DD6D5D89785C86 /* Pods_moviepeekerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,6 @@
 
 /* Begin PBXFileReference section */
 		0A35B039619A50FACACF0324 /* Pods-musicpeekerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicpeekerUITests.debug.xcconfig"; path = "Target Support Files/Pods-musicpeekerUITests/Pods-musicpeekerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		0EB465A815290D2C532E54A8 /* Pods_musicpeekerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicpeekerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F35600722FC46D900405284 /* ActivityTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTracker.swift; sourceTree = "<group>"; };
 		0F35600922FC46E600405284 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		0F35600C22FC47CD00405284 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -90,14 +89,14 @@
 		0FD05327230133A300087236 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0FD05328230133A300087236 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		0FD0532C2301723D00087236 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		0FE85DB422FAE90500C3DABA /* musicpeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicpeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FE85DB422FAE90500C3DABA /* moviepeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moviepeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE85DB722FAE90500C3DABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FE85DBE22FAE90600C3DABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FE85DC322FAE90600C3DABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FE85DC822FAE90600C3DABA /* musicpeekerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicpeekerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FE85DC822FAE90600C3DABA /* moviepeekerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moviepeekerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE85DCC22FAE90600C3DABA /* musicpeekerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicpeekerTests.swift; sourceTree = "<group>"; };
 		0FE85DCE22FAE90600C3DABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FE85DD322FAE90600C3DABA /* musicpeekerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicpeekerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FE85DD322FAE90600C3DABA /* moviepeekerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moviepeekerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE85DD722FAE90600C3DABA /* musicpeekerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicpeekerUITests.swift; sourceTree = "<group>"; };
 		0FE85DD922FAE90600C3DABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FE85DE822FAEF4000C3DABA /* BrowseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseListViewController.swift; sourceTree = "<group>"; };
@@ -118,13 +117,20 @@
 		0FFE571D230ABEB70001F727 /* ItemDetailTrackArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTrackArtCell.swift; sourceTree = "<group>"; };
 		0FFE571E230ABEB70001F727 /* ItemDetailTrackArtCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailTrackArtCell.xib; sourceTree = "<group>"; };
 		0FFE57212314DABE0001F727 /* NavigationItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItems.swift; sourceTree = "<group>"; };
+		135926A43CE5E2A6379C1E7F /* Pods-moviepeekerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moviepeekerUITests.debug.xcconfig"; path = "Target Support Files/Pods-moviepeekerUITests/Pods-moviepeekerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E33480EF5DD6D5D89785C86 /* Pods_moviepeekerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moviepeekerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		484F8C94B082E0DD92E0B80E /* Pods-moviepeekerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moviepeekerTests.release.xcconfig"; path = "Target Support Files/Pods-moviepeekerTests/Pods-moviepeekerTests.release.xcconfig"; sourceTree = "<group>"; };
 		4C40320B59C96DB66C60291A /* Pods-musicpeekerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicpeekerUITests.release.xcconfig"; path = "Target Support Files/Pods-musicpeekerUITests/Pods-musicpeekerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5D889B7FB6EE69CF26D87086 /* Pods-musicpeekerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicpeekerTests.release.xcconfig"; path = "Target Support Files/Pods-musicpeekerTests/Pods-musicpeekerTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E519A41F421563F9BF295C9 /* Pods-musicpeeker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicpeeker.release.xcconfig"; path = "Target Support Files/Pods-musicpeeker/Pods-musicpeeker.release.xcconfig"; sourceTree = "<group>"; };
-		7AE345520BAC8AE72804A064 /* Pods_musicpeekerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicpeekerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		766D28B5F5403A994404C703 /* Pods_moviepeeker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moviepeeker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACC705F73E31F5C32B65155 /* Pods-musicpeekerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicpeekerTests.debug.xcconfig"; path = "Target Support Files/Pods-musicpeekerTests/Pods-musicpeekerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF2385EBCE68B8F609A40A95 /* Pods-moviepeekerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moviepeekerUITests.release.xcconfig"; path = "Target Support Files/Pods-moviepeekerUITests/Pods-moviepeekerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C3E6714D42753103B4998EEB /* Pods-musicpeeker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicpeeker.debug.xcconfig"; path = "Target Support Files/Pods-musicpeeker/Pods-musicpeeker.debug.xcconfig"; sourceTree = "<group>"; };
-		E735FF9D7D5F14441BB97EE3 /* Pods_musicpeeker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicpeeker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4EFD210FF0D7336AEFDE825 /* Pods-moviepeeker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moviepeeker.release.xcconfig"; path = "Target Support Files/Pods-moviepeeker/Pods-moviepeeker.release.xcconfig"; sourceTree = "<group>"; };
+		E84BE00FB9BB7FC029576A1C /* Pods-moviepeeker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moviepeeker.debug.xcconfig"; path = "Target Support Files/Pods-moviepeeker/Pods-moviepeeker.debug.xcconfig"; sourceTree = "<group>"; };
+		F6A664ED9209E04B729F8F34 /* Pods-moviepeekerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moviepeekerTests.debug.xcconfig"; path = "Target Support Files/Pods-moviepeekerTests/Pods-moviepeekerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9FA96131FB1DE8EC7E7FA0D /* Pods_moviepeekerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moviepeekerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				988E5796BACCEDE4C0DD776B /* Pods_musicpeeker.framework in Frameworks */,
+				5ACBBC28E5BD978ED1C02A43 /* Pods_moviepeeker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2401AFB3068BC852EC2B89A3 /* Pods_musicpeekerTests.framework in Frameworks */,
+				C336091A4EA344C90B057149 /* Pods_moviepeekerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD6B098B34A9C5E3B4D21C4D /* Pods_musicpeekerUITests.framework in Frameworks */,
+				2B73B4914643DD5789035739 /* Pods_moviepeekerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,9 +247,9 @@
 		0FE85DAB22FAE90500C3DABA = {
 			isa = PBXGroup;
 			children = (
-				0FE85DB622FAE90500C3DABA /* musicpeeker */,
-				0FE85DCB22FAE90600C3DABA /* musicpeekerTests */,
-				0FE85DD622FAE90600C3DABA /* musicpeekerUITests */,
+				0FE85DB622FAE90500C3DABA /* moviepeeker */,
+				0FE85DCB22FAE90600C3DABA /* moviepeekerTests */,
+				0FE85DD622FAE90600C3DABA /* moviepeekerUITests */,
 				0FE85DB522FAE90500C3DABA /* Products */,
 				5E76D487EDF7AB96A4CA5AEA /* Pods */,
 				2FA43042C0A2FC515A7EED2C /* Frameworks */,
@@ -253,14 +259,14 @@
 		0FE85DB522FAE90500C3DABA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0FE85DB422FAE90500C3DABA /* musicpeeker.app */,
-				0FE85DC822FAE90600C3DABA /* musicpeekerTests.xctest */,
-				0FE85DD322FAE90600C3DABA /* musicpeekerUITests.xctest */,
+				0FE85DB422FAE90500C3DABA /* moviepeeker.app */,
+				0FE85DC822FAE90600C3DABA /* moviepeekerTests.xctest */,
+				0FE85DD322FAE90600C3DABA /* moviepeekerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0FE85DB622FAE90500C3DABA /* musicpeeker */ = {
+		0FE85DB622FAE90500C3DABA /* moviepeeker */ = {
 			isa = PBXGroup;
 			children = (
 				0FE85DB722FAE90500C3DABA /* AppDelegate.swift */,
@@ -275,25 +281,25 @@
 				0FA96EC422FC25050007BE6E /* NetworkManager */,
 				0FE85DE622FAEF0400C3DABA /* Views */,
 			);
-			path = musicpeeker;
+			path = moviepeeker;
 			sourceTree = "<group>";
 		};
-		0FE85DCB22FAE90600C3DABA /* musicpeekerTests */ = {
+		0FE85DCB22FAE90600C3DABA /* moviepeekerTests */ = {
 			isa = PBXGroup;
 			children = (
 				0FE85DCC22FAE90600C3DABA /* musicpeekerTests.swift */,
 				0FE85DCE22FAE90600C3DABA /* Info.plist */,
 			);
-			path = musicpeekerTests;
+			path = moviepeekerTests;
 			sourceTree = "<group>";
 		};
-		0FE85DD622FAE90600C3DABA /* musicpeekerUITests */ = {
+		0FE85DD622FAE90600C3DABA /* moviepeekerUITests */ = {
 			isa = PBXGroup;
 			children = (
 				0FE85DD722FAE90600C3DABA /* musicpeekerUITests.swift */,
 				0FE85DD922FAE90600C3DABA /* Info.plist */,
 			);
-			path = musicpeekerUITests;
+			path = moviepeekerUITests;
 			sourceTree = "<group>";
 		};
 		0FE85DE522FAEEC100C3DABA /* Application */ = {
@@ -404,9 +410,9 @@
 		2FA43042C0A2FC515A7EED2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E735FF9D7D5F14441BB97EE3 /* Pods_musicpeeker.framework */,
-				0EB465A815290D2C532E54A8 /* Pods_musicpeekerTests.framework */,
-				7AE345520BAC8AE72804A064 /* Pods_musicpeekerUITests.framework */,
+				766D28B5F5403A994404C703 /* Pods_moviepeeker.framework */,
+				3E33480EF5DD6D5D89785C86 /* Pods_moviepeekerTests.framework */,
+				F9FA96131FB1DE8EC7E7FA0D /* Pods_moviepeekerUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -420,6 +426,12 @@
 				5D889B7FB6EE69CF26D87086 /* Pods-musicpeekerTests.release.xcconfig */,
 				0A35B039619A50FACACF0324 /* Pods-musicpeekerUITests.debug.xcconfig */,
 				4C40320B59C96DB66C60291A /* Pods-musicpeekerUITests.release.xcconfig */,
+				E84BE00FB9BB7FC029576A1C /* Pods-moviepeeker.debug.xcconfig */,
+				E4EFD210FF0D7336AEFDE825 /* Pods-moviepeeker.release.xcconfig */,
+				F6A664ED9209E04B729F8F34 /* Pods-moviepeekerTests.debug.xcconfig */,
+				484F8C94B082E0DD92E0B80E /* Pods-moviepeekerTests.release.xcconfig */,
+				135926A43CE5E2A6379C1E7F /* Pods-moviepeekerUITests.debug.xcconfig */,
+				AF2385EBCE68B8F609A40A95 /* Pods-moviepeekerUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -427,9 +439,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0FE85DB322FAE90500C3DABA /* musicpeeker */ = {
+		0FE85DB322FAE90500C3DABA /* moviepeeker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0FE85DDC22FAE90600C3DABA /* Build configuration list for PBXNativeTarget "musicpeeker" */;
+			buildConfigurationList = 0FE85DDC22FAE90600C3DABA /* Build configuration list for PBXNativeTarget "moviepeeker" */;
 			buildPhases = (
 				F198A483F0FACCACB0F6312D /* [CP] Check Pods Manifest.lock */,
 				0FE85DB022FAE90500C3DABA /* Sources */,
@@ -441,14 +453,14 @@
 			);
 			dependencies = (
 			);
-			name = musicpeeker;
+			name = moviepeeker;
 			productName = musicpeeker;
-			productReference = 0FE85DB422FAE90500C3DABA /* musicpeeker.app */;
+			productReference = 0FE85DB422FAE90500C3DABA /* moviepeeker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0FE85DC722FAE90600C3DABA /* musicpeekerTests */ = {
+		0FE85DC722FAE90600C3DABA /* moviepeekerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0FE85DDF22FAE90600C3DABA /* Build configuration list for PBXNativeTarget "musicpeekerTests" */;
+			buildConfigurationList = 0FE85DDF22FAE90600C3DABA /* Build configuration list for PBXNativeTarget "moviepeekerTests" */;
 			buildPhases = (
 				16F0EE31B1D7C6D837BB6A70 /* [CP] Check Pods Manifest.lock */,
 				0FE85DC422FAE90600C3DABA /* Sources */,
@@ -460,14 +472,14 @@
 			dependencies = (
 				0FE85DCA22FAE90600C3DABA /* PBXTargetDependency */,
 			);
-			name = musicpeekerTests;
+			name = moviepeekerTests;
 			productName = musicpeekerTests;
-			productReference = 0FE85DC822FAE90600C3DABA /* musicpeekerTests.xctest */;
+			productReference = 0FE85DC822FAE90600C3DABA /* moviepeekerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0FE85DD222FAE90600C3DABA /* musicpeekerUITests */ = {
+		0FE85DD222FAE90600C3DABA /* moviepeekerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0FE85DE222FAE90600C3DABA /* Build configuration list for PBXNativeTarget "musicpeekerUITests" */;
+			buildConfigurationList = 0FE85DE222FAE90600C3DABA /* Build configuration list for PBXNativeTarget "moviepeekerUITests" */;
 			buildPhases = (
 				19927820A2F73CDF80F5B893 /* [CP] Check Pods Manifest.lock */,
 				0FE85DCF22FAE90600C3DABA /* Sources */,
@@ -479,9 +491,9 @@
 			dependencies = (
 				0FE85DD522FAE90600C3DABA /* PBXTargetDependency */,
 			);
-			name = musicpeekerUITests;
+			name = moviepeekerUITests;
 			productName = musicpeekerUITests;
-			productReference = 0FE85DD322FAE90600C3DABA /* musicpeekerUITests.xctest */;
+			productReference = 0FE85DD322FAE90600C3DABA /* moviepeekerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -507,7 +519,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0FE85DAF22FAE90500C3DABA /* Build configuration list for PBXProject "musicpicker" */;
+			buildConfigurationList = 0FE85DAF22FAE90500C3DABA /* Build configuration list for PBXProject "moviepicker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -520,9 +532,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0FE85DB322FAE90500C3DABA /* musicpeeker */,
-				0FE85DC722FAE90600C3DABA /* musicpeekerTests */,
-				0FE85DD222FAE90600C3DABA /* musicpeekerUITests */,
+				0FE85DB322FAE90500C3DABA /* moviepeeker */,
+				0FE85DC722FAE90600C3DABA /* moviepeekerTests */,
+				0FE85DD222FAE90600C3DABA /* moviepeekerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -565,15 +577,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-musicpeeker/Pods-musicpeeker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-moviepeeker/Pods-moviepeeker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-musicpeeker/Pods-musicpeeker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-moviepeeker/Pods-moviepeeker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-musicpeeker/Pods-musicpeeker-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-moviepeeker/Pods-moviepeeker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		16F0EE31B1D7C6D837BB6A70 /* [CP] Check Pods Manifest.lock */ = {
@@ -591,7 +603,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-musicpeekerTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-moviepeekerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -613,7 +625,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-musicpeekerUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-moviepeekerUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -635,7 +647,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-musicpeeker-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-moviepeeker-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -704,12 +716,12 @@
 /* Begin PBXTargetDependency section */
 		0FE85DCA22FAE90600C3DABA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0FE85DB322FAE90500C3DABA /* musicpeeker */;
+			target = 0FE85DB322FAE90500C3DABA /* moviepeeker */;
 			targetProxy = 0FE85DC922FAE90600C3DABA /* PBXContainerItemProxy */;
 		};
 		0FE85DD522FAE90600C3DABA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0FE85DB322FAE90500C3DABA /* musicpeeker */;
+			target = 0FE85DB322FAE90500C3DABA /* moviepeeker */;
 			targetProxy = 0FE85DD422FAE90600C3DABA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -766,10 +778,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Info.plist;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -821,9 +835,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Info.plist;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -833,17 +849,17 @@
 		};
 		0FE85DDD22FAE90600C3DABA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3E6714D42753103B4998EEB /* Pods-musicpeeker.debug.xcconfig */;
+			baseConfigurationReference = E84BE00FB9BB7FC029576A1C /* Pods-moviepeeker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RV923GYE66;
-				INFOPLIST_FILE = musicpeeker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/moviepeeker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appetiserco.musicpeeker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appetiserco.moviepeeker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -852,17 +868,17 @@
 		};
 		0FE85DDE22FAE90600C3DABA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E519A41F421563F9BF295C9 /* Pods-musicpeeker.release.xcconfig */;
+			baseConfigurationReference = E4EFD210FF0D7336AEFDE825 /* Pods-moviepeeker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RV923GYE66;
-				INFOPLIST_FILE = musicpeeker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/moviepeeker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appetiserco.musicpeeker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appetiserco.moviepeeker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -871,7 +887,7 @@
 		};
 		0FE85DE022FAE90600C3DABA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9ACC705F73E31F5C32B65155 /* Pods-musicpeekerTests.debug.xcconfig */;
+			baseConfigurationReference = F6A664ED9209E04B729F8F34 /* Pods-moviepeekerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -893,7 +909,7 @@
 		};
 		0FE85DE122FAE90600C3DABA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D889B7FB6EE69CF26D87086 /* Pods-musicpeekerTests.release.xcconfig */;
+			baseConfigurationReference = 484F8C94B082E0DD92E0B80E /* Pods-moviepeekerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -915,7 +931,7 @@
 		};
 		0FE85DE322FAE90600C3DABA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A35B039619A50FACACF0324 /* Pods-musicpeekerUITests.debug.xcconfig */;
+			baseConfigurationReference = 135926A43CE5E2A6379C1E7F /* Pods-moviepeekerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -936,7 +952,7 @@
 		};
 		0FE85DE422FAE90600C3DABA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C40320B59C96DB66C60291A /* Pods-musicpeekerUITests.release.xcconfig */;
+			baseConfigurationReference = AF2385EBCE68B8F609A40A95 /* Pods-moviepeekerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -958,7 +974,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0FE85DAF22FAE90500C3DABA /* Build configuration list for PBXProject "musicpicker" */ = {
+		0FE85DAF22FAE90500C3DABA /* Build configuration list for PBXProject "moviepicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0FE85DDA22FAE90600C3DABA /* Debug */,
@@ -967,7 +983,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0FE85DDC22FAE90600C3DABA /* Build configuration list for PBXNativeTarget "musicpeeker" */ = {
+		0FE85DDC22FAE90600C3DABA /* Build configuration list for PBXNativeTarget "moviepeeker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0FE85DDD22FAE90600C3DABA /* Debug */,
@@ -976,7 +992,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0FE85DDF22FAE90600C3DABA /* Build configuration list for PBXNativeTarget "musicpeekerTests" */ = {
+		0FE85DDF22FAE90600C3DABA /* Build configuration list for PBXNativeTarget "moviepeekerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0FE85DE022FAE90600C3DABA /* Debug */,
@@ -985,7 +1001,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0FE85DE222FAE90600C3DABA /* Build configuration list for PBXNativeTarget "musicpeekerUITests" */ = {
+		0FE85DE222FAE90600C3DABA /* Build configuration list for PBXNativeTarget "moviepeekerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0FE85DE322FAE90600C3DABA /* Debug */,

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_musicpeekerUITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_musicpeekerUITestsVersionString[];
+FOUNDATION_EXPORT double Pods_moviepeekerUITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_moviepeekerUITestsVersionString[];
 

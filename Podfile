@@ -21,7 +21,7 @@ def display
   pod 'NVActivityIndicatorView'
 end
 
-target 'musicpeeker' do
+target 'moviepeeker' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   inhibit_all_warnings!
@@ -32,12 +32,12 @@ target 'musicpeeker' do
   json
   display
 
-  target 'musicpeekerTests' do
+  target 'moviepeekerTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'musicpeekerUITests' do
+  target 'moviepeekerUITests' do
     inherit! :search_paths
     # Pods for testing
   end

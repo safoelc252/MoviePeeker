@@ -1,6 +1,0 @@
-framework module Pods_musicpeekerTests {
-  umbrella header "Pods-musicpeekerTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
