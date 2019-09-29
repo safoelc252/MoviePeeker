@@ -10,6 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+protocol BrowseListDelegate: class {
+    func searchSong(term: String)
+}
+
 class BrowseListViewController: BaseController {
     @IBOutlet weak var tableView: UITableView!
     
@@ -55,9 +59,8 @@ class BrowseListViewController: BaseController {
             }.disposed(by: disposeBag)
 
         tableView.rx.itemSelected
-            .subscribe(onNext: {  indexPath in
-                // TODO: Add data to Realm
-                self.gotoDetails()
+            .subscribe({  indexPath in
+                self.gotoDetails(item: self.viewModel.dataItems.value[indexPath.element?.row ?? 0])
             }).disposed(by: disposeBag)
     }
     fileprivate func bindIndicator() {
@@ -69,9 +72,8 @@ class BrowseListViewController: BaseController {
     }
 }
 
-extension BrowseListViewController: DashboardDelegate {
+extension BrowseListViewController: BrowseListDelegate {
     func searchSong(term: String) {
-        debugPrint("search: \(term)")
         viewModel.triggerSearch.accept(term)
     }
 }

@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ItemDetailTrackArtCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        let arr = [2, 3, 5]
-        
-    }
+    static let nib = UINib(nibName: "ItemDetailTrackArtCell", bundle: nil)
+    static let identifier = "ItemDetailTrackArtCellID"
     
+    @IBOutlet weak var imageViewArt: UIImageView!
+    
+    func setData(img: String) {
+        if let url = URL(string: img) {
+            let indicator = SDWebImageActivityIndicator()
+            indicator.startAnimatingIndicator()
+            indicator.indicatorView.style = .gray
+            imageViewArt.sd_imageIndicator = indicator
+            imageViewArt.sd_setImage(with: url)
+        }
+    }
 }

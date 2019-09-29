@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F00426D2331C15600324C99 /* ItemDetailDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00426B2331C15600324C99 /* ItemDetailDescriptionCell.swift */; };
+		0F00426E2331C15600324C99 /* ItemDetailDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F00426C2331C15600324C99 /* ItemDetailDescriptionCell.xib */; };
 		0F35600822FC46D900405284 /* ActivityTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35600722FC46D900405284 /* ActivityTracker.swift */; };
 		0F35600A22FC46E600405284 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35600922FC46E600405284 /* ErrorTracker.swift */; };
 		0F35600D22FC47CD00405284 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35600C22FC47CD00405284 /* Observable.swift */; };
@@ -71,6 +73,8 @@
 
 /* Begin PBXFileReference section */
 		0A35B039619A50FACACF0324 /* Pods-musicpeekerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicpeekerUITests.debug.xcconfig"; path = "Target Support Files/Pods-musicpeekerUITests/Pods-musicpeekerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0F00426B2331C15600324C99 /* ItemDetailDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailDescriptionCell.swift; sourceTree = "<group>"; };
+		0F00426C2331C15600324C99 /* ItemDetailDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailDescriptionCell.xib; sourceTree = "<group>"; };
 		0F35600722FC46D900405284 /* ActivityTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTracker.swift; sourceTree = "<group>"; };
 		0F35600922FC46E600405284 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		0F35600C22FC47CD00405284 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -403,6 +407,8 @@
 			children = (
 				0FFE571D230ABEB70001F727 /* ItemDetailTrackArtCell.swift */,
 				0FFE571E230ABEB70001F727 /* ItemDetailTrackArtCell.xib */,
+				0F00426B2331C15600324C99 /* ItemDetailDescriptionCell.swift */,
+				0F00426C2331C15600324C99 /* ItemDetailDescriptionCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -548,6 +554,7 @@
 				0FA045CC2303E22B00D9B65B /* ItemDetailsViewController.xib in Resources */,
 				0FA96EC122FB078F0007BE6E /* BrowseListItemCell.xib in Resources */,
 				0FFE5720230ABEB70001F727 /* ItemDetailTrackArtCell.xib in Resources */,
+				0F00426E2331C15600324C99 /* ItemDetailDescriptionCell.xib in Resources */,
 				0FE85DFA22FAF6B900C3DABA /* LaunchScreen.xib in Resources */,
 				0FD0532A230133A300087236 /* ProfileViewController.xib in Resources */,
 				0FE85DEB22FAEF4000C3DABA /* BrowseListViewController.xib in Resources */,
@@ -661,6 +668,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F00426D2331C15600324C99 /* ItemDetailDescriptionCell.swift in Sources */,
 				0F43212E2300FB97003B1DBE /* UIColor+Ext.swift in Sources */,
 				0FA045CB2303E22B00D9B65B /* ItemDetailsViewController.swift in Sources */,
 				0F35600D22FC47CD00405284 /* Observable.swift in Sources */,
