@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class ItemDetailsViewController: BaseController {
-    @IBOutlet weak var tableView: UITableView!
-    var item: SearchItem?
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var buttonAdd: UIButton!
+    
+    var item: SearchItem!
+    var userProfile = Profile.empty()
     
     convenience init(item: SearchItem) {
         self.init()
@@ -19,7 +24,8 @@ class ItemDetailsViewController: BaseController {
     
     override func prepareDisplay() {
         prepareNavigation()
-        prepareTableView()
+        prepareData()
+        prepareButton()
     }
     
     func prepareNavigation() {
@@ -28,40 +34,44 @@ class ItemDetailsViewController: BaseController {
         addTitle("Item Details")
     }
     
-    func prepareTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(ItemDetailTrackArtCell.nib,
-                           forCellReuseIdentifier: ItemDetailTrackArtCell.identifier)
-        tableView.register(ItemDetailDescriptionCell.nib,
-                           forCellReuseIdentifier: ItemDetailDescriptionCell.identifier)
-        tableView.separatorStyle = .none
+    func prepareButton() {
+        buttonAdd.backgroundColor = .themeLight
+        
+        if (userProfile.favoriteItems?
+            .first(where: { $0.trackId == self.item.trackId }) != nil) {
+            buttonAdd.setTitle("Remove from favorites", for: .normal)
+        } else {
+            buttonAdd.setTitle("Add to favorites", for: .normal)
+        }
+    }
+    
+    func prepareData() {
+        labelTitle.text = item?.trackName ?? ""
+        labelDescription.text = item?.longDescription ?? ""
+        
+        if let data = UserDefaults.standard.object(forKey: "userProfile") as? Data,
+            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers),
+            let mapped = try? Mapper<Profile>().map(JSONObject: json) as Profile {
+            userProfile = mapped
+        }
+    }
+    
+    @IBAction func didTapAdd(_ sender: UIButton) {
+        if (userProfile.favoriteItems?
+            .first(where: { $0.trackId == self.item.trackId }) != nil) {
+            userProfile.favoriteItems?.removeAll(where: {  $0.trackId == self.item.trackId })
+        } else {
+            userProfile.favoriteItems?.append(item)
+        }
+        prepareButton()
     }
 }
 
 extension ItemDetailsViewController {
     @objc func didTapBack() {
+        guard let data = try? JSONSerialization.data(withJSONObject: userProfile.toJSON(), options: .prettyPrinted) else { return }
+        UserDefaults.standard.set(data, forKey: "userProfile")
+        UserDefaults.standard.synchronize()
         navigationController?.popViewController(animated: true)
     }
-}
-
-extension ItemDetailsViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var returnedCell = UITableViewCell()
-        if let cell = tableView.dequeueReusableCell(withIdentifier: ItemDetailDescriptionCell.identifier) as? ItemDetailDescriptionCell {
-            cell.setData(title: item?.trackName ?? "",
-                         description: item?.longDescription ?? "")
-            cell.selectionStyle = .none
-            returnedCell = cell
-        }
-        return returnedCell
-    }
-    
-    
 }

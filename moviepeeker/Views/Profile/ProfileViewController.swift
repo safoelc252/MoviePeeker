@@ -22,14 +22,17 @@ class ProfileViewController: BaseController {
     
     var favoriteItems: [SearchItem] = []
     var userProfile: Profile = Profile.empty()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        prepareData()
+    }
 
     override func prepareDisplay() {
-        prepareData()
         prepareTableView()
     }
     
     func prepareData() {
-        
         if let data = UserDefaults.standard.object(forKey: "userProfile") as? Data,
             let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers),
             let mapped = try? Mapper<Profile>().map(JSONObject: json) as Profile {
@@ -37,6 +40,8 @@ class ProfileViewController: BaseController {
             textFieldName.text = userProfile.displayName
             textFieldAge.text = "\(userProfile.age ?? 1)"
             textFieldGender.text = userProfile.gender ?? ""
+            favoriteItems = userProfile.favoriteItems ?? []
+            tableView.reloadData()
         } else {
             saveData()
         }
@@ -47,6 +52,7 @@ class ProfileViewController: BaseController {
         tableView.register(BrowseListItemCell.nib,
                            forCellReuseIdentifier: BrowseListItemCell.identifier)
         tableView.separatorStyle = .none
+        tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
     }
 }
 
@@ -71,16 +77,21 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return favoriteItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var returnedCell = UITableViewCell()
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "BrowseListItemCell.identifier") as? BrowseListItemCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: BrowseListItemCell.identifier) as? BrowseListItemCell {
             cell.setData(data: favoriteItems[indexPath.row])
+            cell.contentView.backgroundColor = .white
             cell.selectionStyle = .none
             returnedCell = cell
         }
         return returnedCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        gotoDetails(item: favoriteItems[indexPath.row])
     }
 }
