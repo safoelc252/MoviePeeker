@@ -22,6 +22,10 @@
 		0FA96EC022FB078F0007BE6E /* BrowseListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA96EBE22FB078F0007BE6E /* BrowseListItemCell.swift */; };
 		0FA96EC122FB078F0007BE6E /* BrowseListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FA96EBF22FB078F0007BE6E /* BrowseListItemCell.xib */; };
 		0FA96EC322FBB9F20007BE6E /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA96EC222FBB9F20007BE6E /* AppNavigationController.swift */; };
+		0FAB1FE22340C69A00C52FC4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB1FE12340C69A00C52FC4 /* ProfileViewModel.swift */; };
+		0FAB1FE823421F8A00C52FC4 /* StorageCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB1FE723421F8A00C52FC4 /* StorageCore.swift */; };
+		0FAB1FEA2343006500C52FC4 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB1FE92343006500C52FC4 /* StorageManager.swift */; };
+		0FAB1FED2343010600C52FC4 /* GenericStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB1FEC2343010500C52FC4 /* GenericStorage.swift */; };
 		0FD05329230133A300087236 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD05327230133A300087236 /* ProfileViewController.swift */; };
 		0FD0532A230133A300087236 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD05328230133A300087236 /* ProfileViewController.xib */; };
 		0FD0532D2301723D00087236 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0532C2301723D00087236 /* Colors.swift */; };
@@ -84,6 +88,10 @@
 		0FA96EBE22FB078F0007BE6E /* BrowseListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseListItemCell.swift; sourceTree = "<group>"; };
 		0FA96EBF22FB078F0007BE6E /* BrowseListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseListItemCell.xib; sourceTree = "<group>"; };
 		0FA96EC222FBB9F20007BE6E /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		0FAB1FE12340C69A00C52FC4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		0FAB1FE723421F8A00C52FC4 /* StorageCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCore.swift; sourceTree = "<group>"; };
+		0FAB1FE92343006500C52FC4 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		0FAB1FEC2343010500C52FC4 /* GenericStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStorage.swift; sourceTree = "<group>"; };
 		0FD05327230133A300087236 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0FD05328230133A300087236 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		0FD0532C2301723D00087236 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -199,6 +207,7 @@
 			children = (
 				0FD05327230133A300087236 /* ProfileViewController.swift */,
 				0FD05328230133A300087236 /* ProfileViewController.xib */,
+				0FAB1FE12340C69A00C52FC4 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -228,6 +237,32 @@
 				0FF7093C22FC295C00DC9A22 /* NetworkCore */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		0FAB1FE523421F3000C52FC4 /* StorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				0FAB1FEB234300EE00C52FC4 /* Storages */,
+				0FAB1FE623421F4100C52FC4 /* StorageCore */,
+			);
+			path = StorageManager;
+			sourceTree = "<group>";
+		};
+		0FAB1FE623421F4100C52FC4 /* StorageCore */ = {
+			isa = PBXGroup;
+			children = (
+				0FAB1FE723421F8A00C52FC4 /* StorageCore.swift */,
+				0FAB1FE92343006500C52FC4 /* StorageManager.swift */,
+			);
+			path = StorageCore;
+			sourceTree = "<group>";
+		};
+		0FAB1FEB234300EE00C52FC4 /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+				0FAB1FEC2343010500C52FC4 /* GenericStorage.swift */,
+			);
+			path = Storages;
 			sourceTree = "<group>";
 		};
 		0FD0532B2301721000087236 /* Constants */ = {
@@ -274,6 +309,7 @@
 				0F35600622FC468200405284 /* Helpers */,
 				0FF7094B22FC3F5C00DC9A22 /* Models */,
 				0FA96EC422FC25050007BE6E /* NetworkManager */,
+				0FAB1FE523421F3000C52FC4 /* StorageManager */,
 				0FE85DE622FAEF0400C3DABA /* Views */,
 			);
 			path = moviepeeker;
@@ -655,9 +691,12 @@
 				0FA96EC322FBB9F20007BE6E /* AppNavigationController.swift in Sources */,
 				0F35600822FC46D900405284 /* ActivityTracker.swift in Sources */,
 				0FD0532D2301723D00087236 /* Colors.swift in Sources */,
+				0FAB1FED2343010600C52FC4 /* GenericStorage.swift in Sources */,
 				0F5B1014231CC1A900A025ED /* Buttons.swift in Sources */,
+				0FAB1FE823421F8A00C52FC4 /* StorageCore.swift in Sources */,
 				0FD05329230133A300087236 /* ProfileViewController.swift in Sources */,
 				0FF7093E22FC297900DC9A22 /* NetworkCore.swift in Sources */,
+				0FAB1FE22340C69A00C52FC4 /* ProfileViewModel.swift in Sources */,
 				0FE85DED22FAF08B00C3DABA /* Application.swift in Sources */,
 				0FF7094622FC30F000DC9A22 /* NetworkManager.swift in Sources */,
 				0FA96EC022FB078F0007BE6E /* BrowseListItemCell.swift in Sources */,
@@ -668,6 +707,7 @@
 				0F43212C23003D16003B1DBE /* UIView+Ext.swift in Sources */,
 				0FF7094422FC30CF00DC9A22 /* SearchNetwork.swift in Sources */,
 				0FE85DB822FAE90500C3DABA /* AppDelegate.swift in Sources */,
+				0FAB1FEA2343006500C52FC4 /* StorageManager.swift in Sources */,
 				0F35600A22FC46E600405284 /* ErrorTracker.swift in Sources */,
 				0FF7094122FC2DFE00DC9A22 /* Metadata.swift in Sources */,
 				0FE85DF322FAF2B200C3DABA /* ViewModelType.swift in Sources */,
