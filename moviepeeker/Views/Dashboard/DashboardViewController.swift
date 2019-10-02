@@ -9,13 +9,11 @@
 import UIKit
 import Material
 
-protocol DashboardDelegate: class {
-    func searchSong(term: String)
-}
 
 class DashboardViewController: UITabBarController {
     let options = MainTabOption.shared
-    weak var dashboardDelegate: DashboardDelegate?
+    weak var browseListDelegate: BrowseListDelegate?
+    weak var profileDelegate: ProfileDelegate?
     
     override func viewDidLoad() {
         self.delegate = self
@@ -27,7 +25,10 @@ extension DashboardViewController {
     fileprivate func prepareControllers() {
         let controllers = options.controllers()
         if controllers[Controller.browse.rawValue] is BrowseListViewController {
-            dashboardDelegate = controllers[Controller.browse.rawValue] as! BrowseListViewController
+            browseListDelegate = controllers[Controller.browse.rawValue] as! BrowseListViewController
+        }
+        if controllers[Controller.profile.rawValue] is ProfileViewController {
+            profileDelegate = controllers[Controller.profile.rawValue] as! ProfileViewController
         }
         setViewControllers(controllers, animated: true)
         tabBar.tintColor = UIColor.themeLight
@@ -46,10 +47,13 @@ extension DashboardViewController:  UITabBarControllerDelegate {
         
         // clear first
         self.navigationItem.titleView = nil
-
+        self.navigationItem.rightBarButtonItem = nil
+        
         switch type {
         case .browse: addSearchBar()
-        case .profile: addTitle("Profile")
+        case .profile:
+            addTitle("Profile")
+            addSaveButton()
         }
     }
 
@@ -65,15 +69,26 @@ extension DashboardViewController:  UITabBarControllerDelegate {
         let titleLabel = UILabel(frame: .zero)
         titleLabel.sizeToFit()
         titleLabel.text = title
-        titleLabel.font = UIFont(name: "Verdana-Bold", size: 20.0)
-        titleLabel.textColor = .white
+        titleLabel.font = UIFont(name: "Verdana-Bold", size: 17.0)
+        titleLabel.textColor = Color.darkText.primary
         navigationItem.titleView = titleLabel
+    }
+    fileprivate func addSaveButton() {
+        let saveBtnItem = UIBarButtonItem(title: "Save",
+                                          style: .done,
+                                          target: self,
+                                          action: #selector(didTapSave))
+        saveBtnItem.tintColor = .white
+        navigationItem.setRightBarButton(saveBtnItem, animated: false)
+    }
+    @objc fileprivate func didTapSave() {
+        profileDelegate?.didTapSave()
     }
 }
 
 extension DashboardViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        dashboardDelegate?.searchSong(term: searchBar.text ?? "")
+        browseListDelegate?.searchSong(term: searchBar.text ?? "")
     }
 }

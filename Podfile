@@ -19,6 +19,7 @@ def display
   pod 'SDWebImage', '~> 5.0'
   pod 'Material', '~> 3.1.0'
   pod 'NVActivityIndicatorView'
+  pod 'ActionSheetPicker-3.0'
 end
 
 target 'moviepeeker' do

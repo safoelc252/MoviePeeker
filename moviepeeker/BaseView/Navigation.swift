@@ -15,8 +15,8 @@ extension BaseController {
         return navi
     }
     
-    func gotoDetails() {
-        let vc = ItemDetailsViewController()
+    func gotoDetails(item: SearchItem) {
+        let vc = ItemDetailsViewController(item: item)
         self.navigationController?
             .pushViewController(vc, animated: true)
     }

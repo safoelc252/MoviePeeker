@@ -10,17 +10,26 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+protocol BrowseListDelegate: class {
+    func searchSong(term: String)
+}
+
 class BrowseListViewController: BaseController {
     @IBOutlet weak var tableView: UITableView!
     
     let disposeBag = DisposeBag()
     let viewModel = BrowseListViewModel()
     
+    var isTableViewBound = false
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        bindTableView()
+    }
     override func prepareDisplay() {
         prepareTableView()
     }
     override func bindDisplay() {
-        bindTableView()
         bindIndicator()
     }
     override func bindViewModel() {
@@ -45,6 +54,8 @@ class BrowseListViewController: BaseController {
         tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
     }
     fileprivate func bindTableView() {
+        if isTableViewBound { return } // Workaround: Fix UITableViewAlertForLayoutOutsideViewHierarchy caused by Rx internal handling
+        
         viewModel.dataItems
             .asObservable()
             .bind(to: tableView
@@ -55,10 +66,11 @@ class BrowseListViewController: BaseController {
             }.disposed(by: disposeBag)
 
         tableView.rx.itemSelected
-            .subscribe(onNext: {  indexPath in
-                // TODO: Add data to Realm
-                self.gotoDetails()
+            .subscribe({  indexPath in
+                self.gotoDetails(item: self.viewModel.dataItems.value[indexPath.element?.row ?? 0])
             }).disposed(by: disposeBag)
+        
+        isTableViewBound = true
     }
     fileprivate func bindIndicator() {
         viewModel
@@ -69,9 +81,8 @@ class BrowseListViewController: BaseController {
     }
 }
 
-extension BrowseListViewController: DashboardDelegate {
+extension BrowseListViewController: BrowseListDelegate {
     func searchSong(term: String) {
-        debugPrint("search: \(term)")
         viewModel.triggerSearch.accept(term)
     }
 }
