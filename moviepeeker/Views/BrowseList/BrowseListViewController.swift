@@ -20,11 +20,16 @@ class BrowseListViewController: BaseController {
     let disposeBag = DisposeBag()
     let viewModel = BrowseListViewModel()
     
+    var isTableViewBound = false
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        bindTableView()
+    }
     override func prepareDisplay() {
         prepareTableView()
     }
     override func bindDisplay() {
-        bindTableView()
         bindIndicator()
     }
     override func bindViewModel() {
@@ -49,6 +54,8 @@ class BrowseListViewController: BaseController {
         tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
     }
     fileprivate func bindTableView() {
+        if isTableViewBound { return } // suppresses Rx internal warning, 3rd party error
+        
         viewModel.dataItems
             .asObservable()
             .bind(to: tableView
@@ -62,6 +69,8 @@ class BrowseListViewController: BaseController {
             .subscribe({  indexPath in
                 self.gotoDetails(item: self.viewModel.dataItems.value[indexPath.element?.row ?? 0])
             }).disposed(by: disposeBag)
+        
+        isTableViewBound = true
     }
     fileprivate func bindIndicator() {
         viewModel
