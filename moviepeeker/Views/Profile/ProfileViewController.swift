@@ -11,6 +11,7 @@ import SDWebImage
 import ObjectMapper
 import RxSwift
 import RxCocoa
+import ActionSheetPicker_3_0
 
 protocol ProfileDelegate: class {
     func didTapSave()
@@ -36,6 +37,7 @@ class ProfileViewController: BaseController {
     
     override func bindDisplay() {
         bindTableView()
+        bindPickers()
     }
     
     override func bindViewModel() {
@@ -82,6 +84,50 @@ class ProfileViewController: BaseController {
         tableView.rx.itemSelected
             .subscribe({  indexPath in
                 self.gotoDetails(item: self.viewModel.favoriteItems.value[indexPath.element?.row ?? 0])
+            }).disposed(by: disposeBag)
+    }
+    
+    fileprivate func bindPickers() {
+        textFieldAge
+            .rx.controlEvent(.editingDidBegin)
+            .asObservable()
+            .bind(onNext: {
+                self.view.endEditing(true)
+                guard !self.viewModel.ageList.value.isEmpty else { return }
+                let doneBlk:ActionStringDoneBlock = { (picker, row, data) in
+                    guard !self.viewModel.ageList.value.isEmpty else { return }
+                    self.textFieldAge.text = "\(self.viewModel.ageList.value[row])"
+                    self.textFieldAge.sendActions(for: .editingChanged)
+                }
+                let cancelBlk:ActionStringCancelBlock = { _ in }
+                let pickerAge = ActionSheetStringPicker(title: "",
+                                                        rows: self.viewModel.ageList.value,
+                                                        initialSelection: 0,
+                                                        doneBlock: doneBlk,
+                                                        cancel: cancelBlk,
+                                                        origin: self.view)
+                pickerAge?.show()
+            }).disposed(by: disposeBag)
+        
+        textFieldGender
+            .rx.controlEvent(.editingDidBegin)
+            .asObservable()
+            .bind(onNext: {
+                self.view.endEditing(true)
+                guard !self.viewModel.genderList.value.isEmpty else { return }
+                let doneBlk:ActionStringDoneBlock = { (picker, row, data) in
+                    guard !self.viewModel.genderList.value.isEmpty else { return }
+                    self.textFieldGender.text = "\(self.viewModel.genderList.value[row])"
+                    self.textFieldGender.sendActions(for: .editingChanged)
+                }
+                let cancelBlk:ActionStringCancelBlock = { _ in }
+                let pickerGender = ActionSheetStringPicker(title: "",
+                                                           rows: self.viewModel.genderList.value,
+                                                           initialSelection: 0,
+                                                           doneBlock: doneBlk,
+                                                           cancel: cancelBlk,
+                                                           origin: self.view)
+                pickerGender?.show()
             }).disposed(by: disposeBag)
     }
 }

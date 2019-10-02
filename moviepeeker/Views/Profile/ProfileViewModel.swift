@@ -13,6 +13,8 @@ import RxCocoa
 class ProfileViewModel: ViewModelType {
     var userProfile = Profile.empty()
     var favoriteItems = BehaviorRelay<[SearchItem]>(value: [])
+    var ageList = BehaviorRelay<[Int]>(value: (1...100).map{$0})
+    var genderList = BehaviorRelay<[String]>(value: ["Male", "Female"])
     
     var triggerLoad = BehaviorRelay<Bool>(value: false)
     var triggerSave = BehaviorRelay<Bool>(value: false)
