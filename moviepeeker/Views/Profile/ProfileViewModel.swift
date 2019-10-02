@@ -70,6 +70,8 @@ extension ProfileViewModel {
         vc.prepareData()
     }
     func bindSave(vc: ProfileViewController, response: EmptyModel) {
-        // successfully saved
+        let alert = UIAlertController(title: "Message", message: "Data saved!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        vc.present(alert, animated: true, completion: nil)
     }
 }

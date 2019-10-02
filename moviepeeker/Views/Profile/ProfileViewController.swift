@@ -58,7 +58,7 @@ class ProfileViewController: BaseController {
     func prepareData() {
         textFieldName.text = viewModel.userProfile.displayName
         textFieldAge.text = "\(viewModel.userProfile.age ?? 1)"
-        textFieldGender.text = viewModel.userProfile.gender ?? ""
+        textFieldGender.text = viewModel.userProfile.gender ?? "Male"
         viewModel.favoriteItems.accept(viewModel.userProfile.favoriteItems ?? [])
     }
     func prepareTableView() {
@@ -134,6 +134,7 @@ class ProfileViewController: BaseController {
 
 extension ProfileViewController: ProfileDelegate {
     func didTapSave() {
+        textFieldName.resignFirstResponder()
         saveData()
     }
     

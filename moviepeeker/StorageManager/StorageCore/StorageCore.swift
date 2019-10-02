@@ -40,9 +40,16 @@ final class StorageCore<T: ImmutableMappable> {
             }
             UserDefaults.standard.set(data, forKey: key.rawValue)
             UserDefaults.standard.synchronize()
-            
-            observer.on(.completed)
-            return Disposables.create()
+
+            do {
+                let map = try Mapper<T>().map(JSON: [:])
+                observer.on(.next(map))
+                return Disposables.create()
+            }
+            catch {
+                observer.on(.error(RxError.unknown))
+                return Disposables.create()
+            }
           }
     }
     func sets(data: Any, key: StorageKey) -> Observable<T> {
@@ -50,8 +57,15 @@ final class StorageCore<T: ImmutableMappable> {
             UserDefaults.standard.set(data, forKey: key.rawValue)
             UserDefaults.standard.synchronize()
             
-            observer.on(.completed)
-            return Disposables.create()
+            do {
+                let map = try Mapper<T>().map(JSON: [:])
+                observer.on(.next(map))
+                return Disposables.create()
+            }
+            catch {
+                observer.on(.error(RxError.unknown))
+                return Disposables.create()
+            }
         }
     }
     

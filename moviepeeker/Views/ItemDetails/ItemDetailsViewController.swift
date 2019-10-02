@@ -24,8 +24,10 @@ class ItemDetailsViewController: BaseController {
         self.viewModel.item = item
 
         let key: StorageKey = .userProfile
-        if UserDefaults.standard.object(forKey: key.rawValue) as? Data == nil {
-            UserDefaults.standard.set(Profile.empty(), forKey: key.rawValue)
+        if UserDefaults.standard.object(forKey: key.rawValue) as? Data == nil,
+            let data = try? JSONSerialization.data(withJSONObject: Profile.empty().toJSON(),
+                                                   options: .prettyPrinted) {
+            UserDefaults.standard.set(data, forKey: key.rawValue)
             UserDefaults.standard.synchronize()
         }
     }
