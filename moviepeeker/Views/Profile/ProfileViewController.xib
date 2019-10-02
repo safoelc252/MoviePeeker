@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="moviepeeker" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="Znz-YZ-06j" id="P91-kM-obC"/>
+                <outlet property="tableView" destination="pGf-nP-4aM" id="fSN-IX-rQn"/>
                 <outlet property="textFieldAge" destination="VVc-7R-Pks" id="le2-kc-Gr4"/>
                 <outlet property="textFieldGender" destination="0Hu-3e-dC7" id="TaG-be-P8d"/>
                 <outlet property="textFieldName" destination="IHs-UF-N4O" id="zqC-zq-lXn"/>
@@ -80,21 +80,20 @@
                         <constraint firstItem="VVc-7R-Pks" firstAttribute="leading" secondItem="aT4-qC-9SF" secondAttribute="trailing" constant="8" id="ypZ-c3-H7L"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Znz-YZ-06j">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pGf-nP-4aM">
                     <rect key="frame" x="0.0" y="172" width="414" height="690"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="pGf-nP-4aM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1G3-7j-Eef"/>
                 <constraint firstItem="gMO-Kt-oB0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Bz2-aV-U1d"/>
+                <constraint firstItem="pGf-nP-4aM" firstAttribute="top" secondItem="gMO-Kt-oB0" secondAttribute="bottom" id="IBu-TG-DDo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gMO-Kt-oB0" secondAttribute="trailing" id="JYL-dI-Lxn"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Znz-YZ-06j" secondAttribute="bottom" id="Pch-vc-Vrr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pGf-nP-4aM" secondAttribute="bottom" id="Whz-mJ-Tp7"/>
                 <constraint firstItem="gMO-Kt-oB0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bSj-eI-0aH"/>
-                <constraint firstItem="Znz-YZ-06j" firstAttribute="top" secondItem="gMO-Kt-oB0" secondAttribute="bottom" id="dio-ah-YQM"/>
-                <constraint firstItem="Znz-YZ-06j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ev6-yg-nne"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Znz-YZ-06j" secondAttribute="trailing" id="uQx-82-cXO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pGf-nP-4aM" secondAttribute="trailing" id="hBn-BC-oYH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="57.589285714285708"/>

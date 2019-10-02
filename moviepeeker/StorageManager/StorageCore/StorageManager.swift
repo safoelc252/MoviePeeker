@@ -7,15 +7,17 @@
 //
 
 import Foundation
+import RxSwift
+import ObjectMapper
 
-public final class StorageManager {
-    private var storageCore: StorageCore!
+public final class StorageManager<T: ImmutableMappable> {
+    private var storageCore: StorageCore<T>!
     
     public init() {
-        storageCore = StorageCore()
+        storageCore = StorageCore<T>()
     }
     
-    public func makeGenericStorage() -> GenericStorage {
+    public func makeGenericStorage() -> GenericStorage<T> {
         return GenericStorage(storage: storageCore)
     }
 }

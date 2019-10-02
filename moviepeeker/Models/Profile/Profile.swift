@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct Profile {
+public struct Profile {
     var displayName : String?
     var photoUrl : String?
     var gender : String?
@@ -22,7 +22,7 @@ struct Profile {
 }
 
 extension Profile: ImmutableMappable {
-    init(map: Map) throws {
+    public init(map: Map) throws {
         displayName          = try? map.value("displayName")
         photoUrl             = try? map.value("photoUrl")
         gender               = try? map.value("gender")
@@ -30,7 +30,7 @@ extension Profile: ImmutableMappable {
         favoriteItems        = try? map.value("favoriteItems")
     }
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         displayName          <- map["displayName"]
         photoUrl             <- map["photoUrl"]
         gender               <- map["gender"]

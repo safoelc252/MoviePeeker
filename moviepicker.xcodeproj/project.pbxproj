@@ -26,6 +26,7 @@
 		0FAB1FE823421F8A00C52FC4 /* StorageCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB1FE723421F8A00C52FC4 /* StorageCore.swift */; };
 		0FAB1FEA2343006500C52FC4 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB1FE92343006500C52FC4 /* StorageManager.swift */; };
 		0FAB1FED2343010600C52FC4 /* GenericStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB1FEC2343010500C52FC4 /* GenericStorage.swift */; };
+		0FAB1FEF23437AB000C52FC4 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB1FEE23437AB000C52FC4 /* EmptyModel.swift */; };
 		0FD05329230133A300087236 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD05327230133A300087236 /* ProfileViewController.swift */; };
 		0FD0532A230133A300087236 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD05328230133A300087236 /* ProfileViewController.xib */; };
 		0FD0532D2301723D00087236 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0532C2301723D00087236 /* Colors.swift */; };
@@ -92,6 +93,7 @@
 		0FAB1FE723421F8A00C52FC4 /* StorageCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCore.swift; sourceTree = "<group>"; };
 		0FAB1FE92343006500C52FC4 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		0FAB1FEC2343010500C52FC4 /* GenericStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStorage.swift; sourceTree = "<group>"; };
+		0FAB1FEE23437AB000C52FC4 /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
 		0FD05327230133A300087236 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0FD05328230133A300087236 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		0FD0532C2301723D00087236 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 			children = (
 				0F39E8C92303D2EF00573FE5 /* Profile */,
 				0FF7094E22FC3F9C00DC9A22 /* SearchItem */,
+				0FAB1FEE23437AB000C52FC4 /* EmptyModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				0FF7094A22FC3CE700DC9A22 /* BrowseListViewModel.swift in Sources */,
 				0FE85DF122FAF27500C3DABA /* BaseCodeType.swift in Sources */,
 				0FE85DF722FAF44B00C3DABA /* Navigation.swift in Sources */,
+				0FAB1FEF23437AB000C52FC4 /* EmptyModel.swift in Sources */,
 				0FA045C72303DCE500D9B65B /* Indicator.swift in Sources */,
 				0F43212C23003D16003B1DBE /* UIView+Ext.swift in Sources */,
 				0FF7094422FC30CF00DC9A22 /* SearchNetwork.swift in Sources */,

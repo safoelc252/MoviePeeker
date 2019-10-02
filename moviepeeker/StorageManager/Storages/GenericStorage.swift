@@ -7,14 +7,20 @@
 //
 
 import Foundation
+import ObjectMapper
+import RxSwift
 
-public final class GenericStorage {
-    fileprivate var storage: StorageCore!
-    init(storage: StorageCore) {
+public final class GenericStorage<T: ImmutableMappable> {
+    fileprivate var storage: StorageCore<T>!
+    init(storage: StorageCore<T>) {
         self.storage = storage
     }
     
-    public func getUserProfile() {
-        
+    public func getUserProfile() -> Observable<T> {
+        return storage.getMappable(key: .userProfile)
+    }
+    
+    public func saveUserProfile(profile: Profile) -> Observable<T> {
+        return storage.sets(mapper: profile, key: .userProfile)
     }
 }
