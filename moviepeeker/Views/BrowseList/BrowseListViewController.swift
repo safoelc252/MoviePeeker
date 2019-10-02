@@ -54,7 +54,7 @@ class BrowseListViewController: BaseController {
         tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
     }
     fileprivate func bindTableView() {
-        if isTableViewBound { return } // suppresses Rx internal warning, 3rd party error
+        if isTableViewBound { return } // Workaround: Fix UITableViewAlertForLayoutOutsideViewHierarchy caused by Rx internal handling
         
         viewModel.dataItems
             .asObservable()
